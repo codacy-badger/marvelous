@@ -29,7 +29,6 @@ class App extends Component {
     super(props);
     this.state = {
       mapStyle: "",
-      // loaded: true,
       viewport: {
         mapboxApiAccessToken: "pk.eyJ1Ijoic2hldWIiLCJhIjoiWGtobTNPNCJ9.v2JwlNSGBm_KxJUKE_WLig",
         center: [2, 46.5],
@@ -55,7 +54,7 @@ class App extends Component {
   }
   
   componentWillUnmount() {
-    window.removeEventListener("resize", this._resize);
+    window.removeEventListener("resize", this._resize, { passive: true });
   }
 
   _resize = () => {
@@ -127,11 +126,11 @@ class App extends Component {
               mapboxApiAccessToken="pk.eyJ1Ijoic2hldWIiLCJhIjoiWGtobTNPNCJ9.v2JwlNSGBm_KxJUKE_WLig"
               maxZoom={14}
               maxBounds={bounds}
-              //onChangeViewport={this._updateViewport}
-              onChangeViewport={(viewport) => this.setState({ viewport })}
+              //onViewportChange={this._updateViewport}
+              onViewportChange={(viewport) => this.setState({ viewport })}
 
             >
-              {/* {this._renderPopup(null)} */}
+              {this._renderPopup(null)}
 
 
             </MapGL>
