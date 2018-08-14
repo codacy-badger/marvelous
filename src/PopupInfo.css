@@ -1,0 +1,34 @@
+@font-face {
+    font-family: 'ACaslonPro-Regular';
+    src: local('ACaslonPro-Regular'), url(./fonts/Caslon/ACaslonPro-Regular.otf) format('otf');
+}
+
+@font-face {
+    font-family: 'ACaslonPro-Bold';
+    src: local('ACaslonPro-Bold'), url(./fonts/Caslon/ACaslonPro-Bold.otf) format('otf');
+}
+
+.baseText {
+    font-family: "ACaslonPro-Regular";
+    width: 228px;
+    margin-left: 6px;
+    margin-bottom: 6px;
+    margin-top: 6px;
+}
+
+.titleText {
+    font-family: "ACaslonPro-Bold";
+    font-size: 20px;
+    text-decoration: none;
+    color: black;
+}
+
+.picturePoppup {
+    width: 240px;
+    padding-top: 3px;
+}
+
+.popPupStyle {
+    max-width: 240px;
+    padding: 0;
+}
